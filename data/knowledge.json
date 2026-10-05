@@ -1,0 +1,33 @@
+[
+  {
+    "id": "KB-12",
+    "title": "Shared folders after a plan change",
+    "category": "Workspace",
+    "body": "After a workspace plan change, an administrator should confirm the affected members are still active and that the shared folder is attached to the intended workspace. If the members are active and the folder is still missing, collect the workspace name, member email addresses and approximate time of the plan change, then escalate to the workspace support team. Do not ask customers to share passwords or access tokens."
+  },
+  {
+    "id": "KB-27",
+    "title": "Billing review requests",
+    "category": "Billing",
+    "body": "For a disputed renewal, confirm the invoice date, invoice number and the billing email on the account. A support specialist can submit the case to Billing Review. Do not promise a refund or reversal; only the Billing Review team can confirm the outcome."
+  },
+  {
+    "id": "KB-34",
+    "title": "Managing seats and pending invitations",
+    "category": "Accounts",
+    "body": "Removing a teammate does not always release a seat immediately if their account is pending deactivation. An administrator can review Members and Invitations, check for a pending deactivation, and confirm the workspace seat count. If the seat limit still looks wrong, record the plan name and visible seat count for account support."
+  },
+  {
+    "id": "KB-41",
+    "title": "Exporting a project task report",
+    "category": "Projects",
+    "body": "Project administrators can export task data from Project settings, Reports, then Export CSV. Choose a date range before exporting. If Reports is not visible, check whether the member has project administrator access. The export includes task names, status, owners and completion dates."
+  },
+  {
+    "id": "KB-03",
+    "title": "Escalation and customer updates",
+    "category": "Support practice",
+    "body": "Escalate a case when a documented check has failed, an account-level change is needed, or the customer reports a time-sensitive business interruption. Summarise what was checked, the impact and the next owner. Give a clear update expectation, but do not invent a resolution time."
+  }
+]
+
