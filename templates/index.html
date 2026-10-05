@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f4f5f1">
+  <meta name="description" content="RelayDesk is a support-ticket triage copilot demo with cited guidance and human-approved actions.">
+  <title>RelayDesk — Support operations copilot</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <a class="brand" href="#" aria-label="RelayDesk home"><span class="brand-mark">r<span>·</span></span><span>relaydesk<small>SUPPORT OPERATIONS</small></span></a>
+      <div class="workspace-label">WORKSPACE</div>
+      <div class="workspace"><span class="workspace-icon">N</span><span>Northstar demo<small>Sample support team</small></span><span class="chevron">⌄</span></div>
+      <div class="workspace-label nav-label">INBOX</div>
+      <button class="nav-item active" data-view="queue"><span class="nav-icon">▤</span> Triage queue <span id="ticket-count" class="nav-count">04</span></button>
+      <button class="nav-item" data-view="activity"><span class="nav-icon">◷</span> Activity log</button>
+      <div class="sidebar-bottom"><div class="demo-status"><span class="status-dot"></span><span>DEMO ENVIRONMENT<small>All customer records are synthetic</small></span></div><a href="https://github.com/dezer101" target="_blank" rel="noreferrer" class="owner"><span class="avatar">SD</span><span>Shayan Dezfouli<small>Project author</small></span><span class="chevron">···</span></a></div>
+    </aside>
+
+    <main class="main-area">
+      <header class="topbar"><div class="crumb">Operations <span>/</span> <strong id="crumb-current">Triage queue</strong></div><div class="topbar-right"><span class="mode-pill"><i></i> Human review required</span><button id="refresh-btn" class="icon-button" title="Refresh queue" aria-label="Refresh queue">↻</button></div></header>
+      <div id="queue-view" class="view">
+        <section class="page-intro"><div><div class="eyebrow"><span class="tiny-spark">✳</span> SERVICE WORKFLOW COPILOT <span class="eyebrow-rule"></span> PROTOTYPE 01</div><h1>Good support starts<br>with <em>the right context.</em></h1><p>Turn an incoming ticket into a grounded next step. Review the evidence, edit the draft, then approve any action yourself.</p></div><div class="intro-aside"><span class="aside-label">TODAY'S WORKSPACE</span><strong id="queue-open-count">04</strong><span>sample requests in queue</span></div></section>
+        <section class="workspace-grid">
+          <div class="inbox-panel panel">
+            <div class="panel-heading"><div><span class="section-kicker">INCOMING</span><h2>Triage queue <span class="count-chip">04</span></h2></div><button class="filter-button">All tickets <span>⌄</span></button></div>
+            <div id="ticket-list" class="ticket-list" aria-label="Sample support tickets"></div>
+            <div class="queue-foot"><span class="live-indicator"></span> SAMPLE INBOX · LOCAL DEMO DATA</div>
+          </div>
+          <div class="analysis-panel panel">
+            <div class="panel-heading analysis-heading"><div><span class="section-kicker">CASE REVIEW</span><h2 id="analysis-title">Select a ticket</h2></div><span id="ticket-status" class="ticket-state">WAITING</span></div>
+            <div id="empty-state" class="empty-state"><div class="empty-icon">↗</div><h3>Start with a request.</h3><p>Choose a sample ticket on the left to see its category, priority, supporting guidance and suggested next step.</p><div class="empty-points"><span>01 <b>CLASSIFY</b></span><span>02 <b>FIND EVIDENCE</b></span><span>03 <b>REVIEW & APPROVE</b></span></div></div>
+            <div id="case-content" class="case-content hidden">
+              <div class="customer-row"><div id="customer-avatar" class="customer-avatar">MC</div><div><strong id="customer-name">—</strong><span id="customer-company">—</span></div><div class="customer-meta"><span id="ticket-channel">EMAIL</span><span id="ticket-received">—</span></div></div>
+              <div class="request-box"><span class="section-kicker">CUSTOMER REQUEST</span><h3 id="ticket-subject">—</h3><p id="ticket-message">—</p></div>
+              <div class="triage-summary"><div class="summary-title"><span class="section-kicker">COPILOT ASSESSMENT</span><span id="run-id" class="run-id">—</span></div><div class="summary-grid"><div><span class="field-label">CATEGORY</span><strong id="category-value">—</strong></div><div><span class="field-label">PRIORITY</span><strong id="priority-value" class="priority-value">—</strong></div><div><span class="field-label">EVIDENCE</span><strong id="confidence-value">—</strong></div></div><p id="action-reason" class="action-reason"></p></div>
+              <div class="evidence-section"><div class="subhead"><div><span class="section-kicker">RETRIEVED GUIDANCE</span><h3>What the handbook says</h3></div><span id="evidence-count" class="evidence-count">—</span></div><div id="evidence-list" class="evidence-list"></div></div>
+              <div class="draft-section"><div class="subhead"><div><span class="section-kicker">REPLY DRAFT</span><h3>A starting point for a person</h3></div><span id="draft-mode" class="draft-mode">—</span></div><textarea id="draft-text" rows="4" aria-label="Editable suggested reply"></textarea><div class="approval-row"><span><b>NOT SENT</b> · Review and edit before use</span><button id="approve-btn" class="approve-button">Approve suggested action <span>→</span></button></div><div id="approval-feedback" class="approval-feedback" aria-live="polite"></div></div>
+            </div>
+            <div class="analysis-footer"><span>RECOMMENDATION ONLY <b>·</b> HUMAN APPROVAL REQUIRED</span><button id="rerun-btn" class="rerun-button" disabled>↻ Re-run triage</button></div>
+          </div>
+        </section>
+        <footer class="page-footer"><span>RELAYDESK <b>·</b> A LOCAL WORKFLOW PROTOTYPE</span><span>FICTIONAL SUPPORT DATA <b>·</b> NO LIVE CUSTOMER SYSTEMS</span></footer>
+      </div>
+      <div id="activity-view" class="view hidden">
+        <section class="page-intro compact-intro"><div><div class="eyebrow"><span class="tiny-spark">✳</span> WORKSPACE HISTORY</div><h1>Every step, <em>visible.</em></h1><p>Triage runs and approved demo actions appear here so a reviewer can follow what happened.</p></div></section>
+        <section class="panel audit-panel"><div class="panel-heading"><div><span class="section-kicker">AUDIT TRAIL</span><h2>Recent activity</h2></div><span class="count-chip">LOCAL</span></div><div id="audit-list" class="audit-list"></div></section>
+      </div>
+    </main>
+  </div>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <script src="/static/app.js" defer></script>
+</body>
+</html>
+
