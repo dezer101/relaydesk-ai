@@ -1,0 +1,43 @@
+[
+  {
+    "id": "RD-1042",
+    "customer": "Mia Chen",
+    "company": "Northstar Studio",
+    "subject": "Workspace sync stopped after our plan change",
+    "message": "Since moving to the Team plan this morning, two colleagues can no longer see the shared project folder. We have a client review at 3 pm. Can you check what to do?",
+    "channel": "Email",
+    "received": "09:42",
+    "status": "New"
+  },
+  {
+    "id": "RD-1043",
+    "customer": "Daniel Brooks",
+    "company": "Fieldcraft Co.",
+    "subject": "Unexpected renewal charge",
+    "message": "We were charged for an annual renewal yesterday. I thought our account was monthly. Please explain the next step and whether billing can review it.",
+    "channel": "Web form",
+    "received": "09:31",
+    "status": "New"
+  },
+  {
+    "id": "RD-1044",
+    "customer": "Amara Okafor",
+    "company": "Brightline Learning",
+    "subject": "Cannot invite a new teammate",
+    "message": "The invite button says we have reached our seat limit. We removed a former contractor yesterday but still cannot add our new designer.",
+    "channel": "Email",
+    "received": "09:18",
+    "status": "New"
+  },
+  {
+    "id": "RD-1045",
+    "customer": "Leo Martin",
+    "company": "Common Ground",
+    "subject": "Where can I export a project report?",
+    "message": "I need a CSV of tasks completed last month for our internal review. I cannot find the export option in the project menu.",
+    "channel": "Chat",
+    "received": "08:56",
+    "status": "New"
+  }
+]
+
